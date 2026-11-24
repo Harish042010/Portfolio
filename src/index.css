@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #14111F;
+  --color-lilac: #B8A4FF;
+  --color-butter: #FFE9A8;
+  --color-cream: #FBF7EF;
+  --color-deep: #5B3FD6;
+
+  --font-display: 'Unbounded', Impact, sans-serif;
+  --font-sans: 'Figtree', system-ui, sans-serif;
+}
+
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background: #14111F;
+  color: #14111F;
+  font-family: 'Figtree', system-ui, sans-serif;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
+}
+
+:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+/* Custom effects and animations */
+.lit {
+  -webkit-mask-image: radial-gradient(circle 210px at var(--x, 50%) var(--y, 45%), #000 30%, transparent 100%);
+  mask-image: radial-gradient(circle 210px at var(--x, 50%) var(--y, 45%), #000 30%, transparent 100%);
+}
+
+.rise {
+  animation: rise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mq {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 40s linear infinite;
+}
+
+.animate-ping-slow {
+  animation: ping 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.mq {
+  display: flex;
+  width: max-content;
+  animation: mq 38s linear infinite;
+}
+
+.mq.r {
+  animation-direction: reverse;
+}
+
+.mqw:hover .mq,
+.mqw:focus-within .mq {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .lit {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+  .mq {
+    width: auto !important;
+    flex-wrap: wrap !important;
+  }
+  .mq + .mq,
+  .dup {
+    display: none !important;
+  }
+}
+
+/* Landing page CSS-only animations — no JS RAF needed */
+@keyframes landFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes orbit3d {
+  0% {
+    transform: rotateX(68deg) rotateY(15deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(68deg) rotateY(15deg) rotateZ(360deg);
+  }
+}
+
+@keyframes orbit3dRev {
+  0% {
+    transform: rotateX(60deg) rotateY(-20deg) rotateZ(360deg);
+  }
+  100% {
+    transform: rotateX(60deg) rotateY(-20deg) rotateZ(0deg);
+  }
+}
+
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) scale(1.02);
+  }
+}
+
+@keyframes floatOrbRev {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+@keyframes auraBreathe {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.15);
+  }
+}
+
+.animate-orbit-3d {
+  animation: orbit3d 24s linear infinite;
+}
+
+.animate-orbit-3d-rev {
+  animation: orbit3dRev 18s linear infinite;
+}
+
+.animate-float-slow {
+  animation: floatOrb 6s ease-in-out infinite;
+}
+
+.animate-float-rev {
+  animation: floatOrbRev 7s ease-in-out infinite;
+}
+
+.animate-aura {
+  animation: auraBreathe 8s ease-in-out infinite;
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  #resume-modal {
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+  }
+  #resume-modal > div {
+    max-height: none !important;
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  nav, aside, footer, #enter-site-btn, .print\:hidden {
+    display: none !important;
+  }
+}

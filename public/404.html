@@ -1,0 +1,145 @@
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>404 — Page Not Found | Harish Portfolio</title>
+    <meta name="description" content="The page you are looking for does not exist." />
+    <link rel="icon" type="image/png" href="./avatar.png" />
+    <link rel="shortcut icon" type="image/png" href="./avatar.png" />
+    <link rel="apple-touch-icon" href="./avatar.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;800;900&family=Figtree:wght@400;600;700&display=swap"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #14111f;
+        color: #fbf7ef;
+        font-family: 'Figtree', system-ui, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        overflow: hidden;
+        position: relative;
+      }
+      .glow-1 {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(184, 164, 255, 0.18), transparent 70%);
+        top: -100px;
+        right: -100px;
+        pointer-events: none;
+      }
+      .glow-2 {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(91, 63, 214, 0.25), transparent 70%);
+        bottom: -100px;
+        left: -100px;
+        pointer-events: none;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 2rem;
+        padding: 3rem 2rem;
+        max-width: 540px;
+        width: 100%;
+        text-align: center;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        position: relative;
+        z-index: 10;
+      }
+      .badge {
+        display: inline-block;
+        padding: 0.35rem 0.85rem;
+        border-radius: 9999px;
+        background: rgba(184, 164, 255, 0.15);
+        border: 1px solid rgba(184, 164, 255, 0.3);
+        color: #b8a4ff;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 1.5rem;
+      }
+      h1 {
+        font-family: 'Unbounded', Impact, sans-serif;
+        font-size: clamp(3.5rem, 10vw, 6rem);
+        font-weight: 900;
+        line-height: 1;
+        background: linear-gradient(135deg, #ffe9a8 0%, #b8a4ff 50%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+      }
+      h2 {
+        font-family: 'Unbounded', Impact, sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: #fbf7ef;
+      }
+      p {
+        color: rgba(251, 247, 239, 0.75);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.85rem 2rem;
+        background: #b8a4ff;
+        color: #14111f;
+        font-weight: 700;
+        font-size: 0.9rem;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition: transform 0.2s, background 0.2s;
+        box-shadow: 0 10px 25px -5px rgba(184, 164, 255, 0.3);
+      }
+      .btn:hover {
+        background: #ffe9a8;
+        transform: scale(1.04);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glow-1"></div>
+    <div class="glow-2"></div>
+    <div class="card">
+      <div class="badge">HTTP 404 — Routing Anomaly</div>
+      <h1>404</h1>
+      <h2>Coordinates Not Found</h2>
+      <p>
+        The page or file you are trying to reach has drifted into deep space, moved, or never existed in the engineering manifest.
+      </p>
+      <a href="/" class="btn">
+        <span>Return to Portfolio</span>
+        <span>➔</span>
+      </a>
+    </div>
+  </body>
+</html>
