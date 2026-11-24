@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Mail } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './BrandIcons';
-import { EMAIL, GITHUB_URL, LINKEDIN_URL } from '../data';
+import { GithubIcon, LinkedinIcon, InstagramIcon } from './BrandIcons';
+import { EMAIL, GITHUB_URL, LINKEDIN_URL, INSTAGRAM_URL } from '../data';
 
 interface SocialDockProps {
   onOpenResume?: () => void;
@@ -21,6 +21,12 @@ export default function SocialDock({}: SocialDockProps) {
       name: 'LinkedIn',
       href: LINKEDIN_URL,
       icon: LinkedinIcon,
+      isExternal: true,
+    },
+    {
+      name: 'Instagram',
+      href: INSTAGRAM_URL,
+      icon: InstagramIcon,
       isExternal: true,
     },
     {

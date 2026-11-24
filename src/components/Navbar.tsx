@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { GithubIcon, LinkedinIcon } from './BrandIcons';
-import { GITHUB_URL, LINKEDIN_URL, EMAIL } from '../data';
+import { GithubIcon, LinkedinIcon, InstagramIcon } from './BrandIcons';
+import { GITHUB_URL, LINKEDIN_URL, INSTAGRAM_URL, EMAIL } from '../data';
 import {
   Menu,
   X,
@@ -141,6 +141,16 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
             className="flex items-center justify-center w-8 h-8 rounded-full text-ink hover:text-cream hover:bg-ink transition-colors"
           >
             <GithubIcon className="w-4 h-4" />
+          </a>
+
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram Profile"
+            className="flex items-center justify-center w-8 h-8 rounded-full text-ink hover:text-cream hover:bg-ink transition-colors"
+          >
+            <InstagramIcon className="w-4 h-4" />
           </a>
         </div>
       </nav>
@@ -290,12 +300,12 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
               <span className="text-xs font-bold text-ink/50 uppercase tracking-wider block mb-2.5">
                 Connect Directly
               </span>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-4 gap-1.5 sm:gap-2">
                 <a
                   href={GITHUB_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-2xl bg-ink/5 text-ink hover:bg-ink hover:text-cream transition-colors text-xs font-bold gap-1.5"
+                  className="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-ink/5 text-ink hover:bg-ink hover:text-cream transition-colors text-[11px] font-bold gap-1"
                 >
                   <GithubIcon className="w-4 h-4" />
                   <span>GitHub</span>
@@ -304,14 +314,23 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
                   href={LINKEDIN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-2xl bg-ink/5 text-ink hover:bg-ink hover:text-cream transition-colors text-xs font-bold gap-1.5"
+                  className="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-ink/5 text-ink hover:bg-ink hover:text-cream transition-colors text-[11px] font-bold gap-1"
                 >
                   <LinkedinIcon className="w-4 h-4" />
                   <span>LinkedIn</span>
                 </a>
                 <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-ink/5 text-ink hover:bg-ink hover:text-cream transition-colors text-[11px] font-bold gap-1"
+                >
+                  <InstagramIcon className="w-4 h-4" />
+                  <span>Instagram</span>
+                </a>
+                <a
                   href={`mailto:${EMAIL}`}
-                  className="flex flex-col items-center justify-center p-3 rounded-2xl bg-lilac/30 text-deep hover:bg-deep hover:text-cream transition-colors text-xs font-bold gap-1.5"
+                  className="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-lilac/30 text-deep hover:bg-deep hover:text-cream transition-colors text-[11px] font-bold gap-1"
                 >
                   <Mail className="w-4 h-4" />
                   <span>Email</span>

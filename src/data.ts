@@ -19,6 +19,7 @@ export type Project = {
 export const EMAIL = 'harishr0007r@gmail.com';
 export const GITHUB_URL = 'https://github.com/Harish042010';
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/harish-h-62aa48327';
+export const INSTAGRAM_URL = 'https://www.instagram.com/harijxse?evlk=MTc1bWYyaXRyemQyMw==';
 export const LOCATION = 'Krishnagiri / Coimbatore, Tamil Nadu, India';
 
 export const PROJECTS: Project[] = [

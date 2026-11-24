@@ -15,8 +15,8 @@ import {
   Sparkles,
   Printer,
 } from 'lucide-react';
-import { EMAIL, GITHUB_URL, LINKEDIN_URL, LOCATION, ROLES_DETAILED, HACKS_DETAILED, PROJECTS } from '../data';
-import { GithubIcon, LinkedinIcon } from './BrandIcons';
+import { EMAIL, GITHUB_URL, LINKEDIN_URL, INSTAGRAM_URL, LOCATION, ROLES_DETAILED, HACKS_DETAILED, PROJECTS } from '../data';
+import { GithubIcon, LinkedinIcon, InstagramIcon } from './BrandIcons';
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -199,6 +199,15 @@ React.js, TypeScript, JavaScript, Node.js, Express.js, MongoDB, PostgreSQL, Pyth
                 >
                   <LinkedinIcon className="w-3.5 h-3.5 text-deep" />
                   <span>LinkedIn Profile</span>
+                </a>
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-deep flex items-center gap-1.5"
+                >
+                  <InstagramIcon className="w-3.5 h-3.5 text-deep" />
+                  <span>@harijxse</span>
                 </a>
               </div>
             </div>

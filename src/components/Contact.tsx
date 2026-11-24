@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Rise from './Rise';
-import { EMAIL, GITHUB_URL, LINKEDIN_URL, LOCATION } from '../data';
-import { GithubIcon, LinkedinIcon } from './BrandIcons';
+import { EMAIL, GITHUB_URL, LINKEDIN_URL, INSTAGRAM_URL, LOCATION } from '../data';
+import { GithubIcon, LinkedinIcon, InstagramIcon } from './BrandIcons';
 import {
   Mail,
   Copy,
@@ -222,15 +222,15 @@ export default function Contact({ onReplay }: ContactProps) {
             </div>
 
             {/* Social Connect Links */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
               {/* GitHub */}
               <a
                 href={GITHUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/[0.04] border border-white/10 hover:border-white/25 rounded-2xl p-4 transition-all duration-200 flex flex-col justify-between group hover:-translate-y-0.5"
+                className="bg-white/[0.04] border border-white/10 hover:border-white/25 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 flex flex-col justify-between group hover:-translate-y-0.5"
               >
-                <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center justify-between mb-2.5">
                   <GithubIcon className="w-5 h-5 text-cream/70 group-hover:text-butter transition-colors" />
                   <ArrowRight className="w-4 h-4 text-cream/40 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -245,15 +245,32 @@ export default function Contact({ onReplay }: ContactProps) {
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/[0.04] border border-white/10 hover:border-white/25 rounded-2xl p-4 transition-all duration-200 flex flex-col justify-between group hover:-translate-y-0.5"
+                className="bg-white/[0.04] border border-white/10 hover:border-white/25 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 flex flex-col justify-between group hover:-translate-y-0.5"
               >
-                <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center justify-between mb-2.5">
                   <LinkedinIcon className="w-5 h-5 text-cream/70 group-hover:text-butter transition-colors" />
                   <ArrowRight className="w-4 h-4 text-cream/40 group-hover:translate-x-1 transition-transform" />
                 </div>
                 <div>
                   <span className="text-xs font-bold text-cream block">LinkedIn</span>
-                  <span className="text-[11px] text-cream/50 truncate block">Professional Network</span>
+                  <span className="text-[11px] text-cream/50 truncate block">Network</span>
+                </div>
+              </a>
+
+              {/* Instagram */}
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/[0.04] border border-white/10 hover:border-white/25 rounded-2xl p-3.5 sm:p-4 transition-all duration-200 flex flex-col justify-between group hover:-translate-y-0.5"
+              >
+                <div className="flex items-center justify-between mb-2.5">
+                  <InstagramIcon className="w-5 h-5 text-cream/70 group-hover:text-butter transition-colors" />
+                  <ArrowRight className="w-4 h-4 text-cream/40 group-hover:translate-x-1 transition-transform" />
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-cream block">Instagram</span>
+                  <span className="text-[11px] text-cream/50 truncate block">@harijxse</span>
                 </div>
               </a>
             </div>
